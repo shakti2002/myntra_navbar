@@ -1,18 +1,21 @@
-import React, { useState } from 'react';
-import axios from 'axios';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import JoinPage from './components/JoinPage';
 
-function App() {
-    
-    
 
-    return (
-        <div className="App">
-            <h1>
-                practice-deploying in vercel
-            </h1>
-        </div>
-    );
-}
+const App = () => {
+  return (
+    <Router>
+      <div>
+        <Navbar />
+        <Routes>
+          <Route path="/join/:section" element={<JoinPage />} />
+         
+        </Routes>
+      </div>
+    </Router>
+  );
+};
 
 export default App;
