@@ -40,7 +40,9 @@ const Comments = () => {
                     A new trend of yellow with white
                 </div>
             </div>
-
+            <h1 className="w-fit mt-4 p-2 m-auto bg-black">
+                Comments
+            </h1>
             {comments.map((comment, index) => (
                 <div key={index} className="w-[100%] p-2 bg-pink-600 rounded my-2 flex justify-between items-center">
                     {editingIndex === index ? (
